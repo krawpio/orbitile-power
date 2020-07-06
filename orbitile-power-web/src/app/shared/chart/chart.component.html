@@ -1,0 +1,14 @@
+<div class="chart-wrapper">
+  <h2 [style.padding-left.px]="titlePadding">{{title}}</h2>
+  <canvas baseChart
+          [width]="544"
+          [height]="160"
+          [datasets]="chartData"
+          [labels]="chartLabels"
+          [options]="chartOptions"
+          [legend]="chartLegend"
+          [chartType]="chartType"
+          [colors]="chartColors"
+          [plugins]="chartPlugins"
+  ></canvas>
+</div>

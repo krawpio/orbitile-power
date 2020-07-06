@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: 'orbitile-power-backend-deployment'
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: orbitile-power-backend
+  template:
+    metadata:
+      labels:
+        component: orbitile-power-backend
+    spec:
+        containers:
+          - name: orbitile-power-api
+            image: orbitile-power/orbitile-power-backend
+            ports:
+              - containerPort: 8080
+            env:
+              - name: MONGODB_HOST
+                value: orbitile-power-mango-cluster-ip-service
+              - name: MONGO_INITDB_ROOT_USERNAME
+                value: root
+              - name: MONGO_INITDB_ROOT_PASSWORD
+                valueFrom:
+                  secretKeyRef:
+                    name: mangopassword
+                    key:  MANGOPASSWORD

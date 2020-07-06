@@ -1,0 +1,23 @@
+<div class="alert-popup">
+  <div class="alert-elem">
+    <div class="alert-title">DATA UTWORZENIA</div>
+    <div class="alert-value">{{feature.properties.createdtime}}</div>
+  </div>
+  <div class="alert-elem">
+    <div class="alert-title">POWIERZCHNIA</div>
+    <div class="alert-value">{{area}} m2</div>
+  </div>
+  <div class="alert-elem">
+    <div class="alert-title">NAZWA LINII</div>
+    <div class="alert-value">{{feature.properties.name}}</div>
+  </div>
+  <div class="alert-elem">
+    <div class="alert-title">PRZĘSŁO</div>
+    <div class="alert-value">{{feature.properties.span}}</div>
+  </div>
+
+  <div class="alert-elem" *ngIf="feature.properties.description">
+    <div class="alert-title">OPIS</div>
+    <div class="alert-value">{{feature.properties.description}}</div>
+  </div>
+</div>

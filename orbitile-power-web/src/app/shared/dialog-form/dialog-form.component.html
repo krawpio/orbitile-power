@@ -1,0 +1,14 @@
+<div class="dialog">
+  <h2>{{title}}</h2>
+  <div mat-dialog-content>
+    <div *ngFor="let control of controls" class="form-row">
+      <app-control [control]="control" ></app-control>
+    </div>
+
+  </div>
+  <div mat-dialog-actions class="dialog-buttons">
+    <button mat-button (click)="cancel()" class="cancel-button">Anuluj</button>
+    <button mat-flat-button color="accent" [mat-dialog-close]="getForm()" cdkFocusInitial>{{submitTitle}}</button>
+  </div>
+</div>
+

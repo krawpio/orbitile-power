@@ -1,0 +1,66 @@
+$base-icon-color: #6A708E;
+$base-label-color: #FFFFFF;
+$hover-color: white;
+$hover-background-color: #262C47;
+$selected-color: #E3CBB1;
+
+.menu {
+  width: 126px;
+  height: 90px;
+  outline: none;
+
+  .icon {
+    color: $base-icon-color;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+  }
+
+
+  .label {
+    width: 100%;
+    text-align: center;
+    font-family: Mukta;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: $base-label-color;
+  }
+
+  &:hover {
+    cursor: pointer;
+    background-color: $hover-background-color;
+
+    .icon {
+      color: $hover-color;
+    }
+
+    .label {
+      color: $hover-color;
+    }
+  }
+
+  &.selected {
+    border-left: 3px solid $selected-color;
+    width:123px;
+
+    .icon {
+      color: $selected-color;
+      right:1.5px;
+      position:relative;
+    }
+
+    .label {
+      color: $selected-color;
+      right:1.5px;
+      position:relative;
+
+    }
+  }
+}
+
+.label .mat-list-item-content {
+  width: 100%;
+  margin: auto;
+}

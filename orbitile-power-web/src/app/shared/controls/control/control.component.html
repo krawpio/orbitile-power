@@ -1,0 +1,12 @@
+<div>
+  <label *ngIf="!hideLabel" [attr.for]="control.key">{{control.label}}</label>
+  <div [ngSwitch]="control.controlType" class="standard-input">
+    <app-textbox [control]="control" *ngSwitchCase="'textbox'"></app-textbox>
+    <app-dropdown [control]="control" *ngSwitchCase="'dropdown'"></app-dropdown>
+    <app-slider [control]="control" *ngSwitchCase="'slider'"></app-slider>
+    <app-daterange [control]="control" *ngSwitchCase="'daterange'"></app-daterange>
+    <app-date [control]="control" *ngSwitchCase="'date'"></app-date>
+    <app-selection-dropdown [control]="control" *ngSwitchCase="'selection-dropdown'">
+    </app-selection-dropdown>
+  </div>
+</div>

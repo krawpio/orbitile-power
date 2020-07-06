@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: orbitile-power-frontend-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: orbitile-power-frontend
+  template:
+    metadata:
+      labels:
+        component: orbitile-power-frontend
+    spec:
+      containers:
+        - name: orbitile-power-frontend
+          image: orbitile-power/orbitile-power-frontend
+          ports:
+            - containerPort: 4200

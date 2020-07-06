@@ -1,0 +1,22 @@
+.alert-popup {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  font-family: Mukta;
+
+.alert-elem {
+.alert-title {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 23px;
+  color: #A6A6A6;
+}
+.alert-value {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 140%;
+  margin-top: 4px;
+}
+}
+}
