@@ -1,0 +1,34 @@
+<mat-drawer-container autosize>
+  <mat-drawer mode="side" class="main-content" [opened]="!mapExpanded" [style.min-width.px]="mainWidth">
+    <ng-container *ngIf="infoFields?.length > 0">
+      <div class="details">
+        <app-info-details [title]="title"></app-info-details>
+        <app-info-general-content [infoFields]="infoFields" [editMode]="editMode">
+        </app-info-general-content>
+        <div class="details-content">
+          <ng-content select="[details]" ></ng-content>
+        </div>
+      </div>
+      <ng-container *ngIf="actions">
+        <app-info-actions [actions]="actions"></app-info-actions>
+      </ng-container>
+    </ng-container>
+    <ng-container *ngIf="!(infoFields?.length > 0)" >
+      <ng-content select="[fullDetails]" ></ng-content>
+    </ng-container>
+  </mat-drawer>
+
+  <div class="map-content">
+    <button type="button" mat-button (click)="mapToggle()" class="map-toggle">
+      <ng-container *ngIf="!mapExpanded">
+        <mat-icon svgIcon="map-expand" class="icon"></mat-icon>
+        <span>Rozwiń widok mapy</span>
+      </ng-container>
+      <ng-container *ngIf="mapExpanded">
+        <mat-icon svgIcon="map-shrink" class="icon"></mat-icon>
+        <span>Wróć do widoku tabeli</span>
+      </ng-container>
+    </button>
+    <ng-content select="[map]"></ng-content>
+  </div>
+</mat-drawer-container>

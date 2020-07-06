@@ -1,0 +1,18 @@
+<app-info-with-map>
+  <div fullDetails>
+    <app-search
+      [dataUrl]="dataUrl"
+      [modelType]="modelType"
+      [title]="title"
+      [filters]="filters"
+      [extendedFilters]="extendedFilters"
+      [extendedFiltersStyle]="filtersStyle"
+      (itemsSelected)="itemsSelected($event)"
+      [actions]="actions">
+    </app-search>
+  </div>
+  <app-map map [alerts]="alertsSelected"></app-map>
+</app-info-with-map>
+
+
+

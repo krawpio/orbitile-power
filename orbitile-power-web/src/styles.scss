@@ -1,0 +1,89 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body, app-root {
+  height: 100%;
+  width: 100%
+}
+
+body {
+  margin: 0;
+  font-family: Mukta;
+  font-style: normal;
+  background-color: white
+}
+
+
+@font-face {
+  font-family: 'Mukta';
+  src: url(/assets/fonts/mukta/Mukta-ExtraLight.ttf) format("truetype");
+  font-weight: 200;
+}
+
+
+@font-face {
+  font-family: 'Mukta';
+  src: url(/assets/fonts/mukta/Mukta-Light.ttf) format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url(/assets/fonts/mukta/Mukta-Regular.ttf) format("truetype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Mukta';
+  src: url(/assets/fonts/mukta/Mukta-Medium.ttf) format("truetype");
+  font-weight: 500;
+}
+
+a {
+  color: #283278;
+  text-decoration-line: underline;
+}
+
+//::ng-deep {
+.mat-button-wrapper {
+  line-height: 40px;
+}
+
+//}
+
+
+.alert:hover {
+  opacity: 1 !important;
+  stroke-width: 2
+}
+.leaflet-popup-content-wrapper {
+  border-radius:0;
+}
+
+.alert-popup {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 20px;
+  font-family: Mukta;
+
+  .alert-elem {
+    .alert-title {
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 23px;
+      color: #A6A6A6;
+    }
+    .alert-value {
+      font-style: normal;
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 140%;
+      margin-top: 4px;
+    }
+  }
+}
+
+.snack-custom {
+  padding: 0 !important;
+  min-width: 0 !important;
+}
+

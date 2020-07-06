@@ -1,0 +1,18 @@
+.main-menu {
+  background-color:#1A1F38;
+  padding-top: 0;
+  height: 100%;
+}
+
+.logo {
+  width: 94px;
+  height: 37.6px;
+  padding-left: calc(50% - 94px/2);
+  padding-top: 40px;
+  margin-bottom: 100px;
+}
+
+app-main-menu-element:last-child {
+  position: absolute;
+  bottom: 0;
+}

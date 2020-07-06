@@ -1,0 +1,29 @@
+<div class="dashboard">
+  <h1>Pulpit</h1>
+  <app-tab-grid [filterGroups]="tabFilters"></app-tab-grid>
+</div>
+
+<div class="charts">
+  <div class="chart">
+    <h2>Monitorowane linie</h2>
+    <app-chart
+      title="Napięcie linii / długość [km]"
+      titlePadding="14"
+      [chartLabels]="powerlineChartLabels"
+      [chartData]="powerlineChartData"
+      [chartColors]="powerlineChartColors"
+      chartType="horizontalBar"
+    ></app-chart>
+  </div>
+  <div class="chart">
+    <h2>Nowe alarmy</h2>
+    <app-chart
+      title="Powierzchnia [m2] / rok"
+      titlePadding="6"
+      [chartLabels]="alertChartLabels"
+      [chartData]="alertChartData"
+      [chartColors]="alertChartColors"
+      chartType="line"
+    ></app-chart>
+  </div>
+</div>

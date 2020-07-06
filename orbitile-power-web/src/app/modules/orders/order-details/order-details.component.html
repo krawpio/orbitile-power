@@ -1,0 +1,18 @@
+<div *ngIf="order$ | async as order">
+  <div *ngIf="allAlerts$ | async as alerts">
+    <app-info-with-map
+      title="Zlecenie nr {{order.nr}}"
+      [infoFields]="infoFields"
+      [updateUrl]="updateUrl">
+      <div details>
+        <div class="alert-panel">
+          <app-expansion-grid
+            title="Lista alarmów w danej zleceniu"
+            [data]="alerts">
+          </app-expansion-grid>
+        </div>
+      </div>
+      <app-map map [alerts]="alerts" noAdditionalAlerts="true"></app-map>
+    </app-info-with-map>
+  </div>
+</div>

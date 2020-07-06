@@ -1,0 +1,19 @@
+<div class="dialog">
+  <h2>Tworzenie zlecenia</h2>
+  <div mat-dialog-content>
+    <h5>Wybierz z listy alarmy, z których chcesz utworzyć zlecenie</h5>
+    <mat-form-field appearance="outline" color="accent" class="select">
+      <mat-label>Alarmy</mat-label>
+      <mat-select [formControl]="alertForm" multiple >
+        <mat-option *ngFor="let alert of alerts" [value]="alert">{{alert.createdTime | date:'yyyy-MM-dd'}}
+          / {{alert.area | number:'1.1-1'}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </div>
+  <div mat-dialog-actions class="dialog-buttons">
+    <button mat-button (click)="cancel()" class="cancel-button">Anuluj</button>
+    <button mat-flat-button color="accent" [mat-dialog-close]="getSelectedAlerts()" cdkFocusInitial>Utwórz zlecenie</button>
+  </div>
+</div>
+

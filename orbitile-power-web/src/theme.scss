@@ -1,0 +1,85 @@
+@import '~@angular/material/theming';
+
+$custom-typography: mat-typography-config(
+  $font-family: "Mukta",
+  $headline: mat-typography-level(32px, 32px, 300),
+  $body-2: mat-typography-level(14px, 23px, 500),
+  $body-1: mat-typography-level(16px, 140%, 300),
+  $button: mat-typography-level(16px, 20px, 500) //$input:         mat-typography-level(inherit, 1, 400)
+);
+
+@include mat-core($custom-typography);
+
+
+$blue-palette: (
+  50: #e5e6ef,
+  100: #bfc2d7,
+  200: #9499bc,
+  300: #6970a1,
+  400: #48518c,
+  500: #283278,
+  600: #242d70,
+  700: #1e2665,
+  800: #181f5b,
+  900: #0f1348,
+  A100: #8189ff,
+  A200: #4e59ff,
+  A400: #1b29ff,
+  A700: #0211ff,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: $black-87-opacity,
+    900: $black-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+$beige-palette: (
+  50: #fcf9f6,
+  100: #f7efe8,
+  200: #f1e5d8,
+  300: #ebdbc8,
+  400: #e7d3bd,
+  500: #e3cbb1,
+  600: #e0c6aa,
+  700: #dcbea1,
+  800: #d8b898,
+  900: #d0ac88,
+  A100: #ffffff,
+  A200: #ffffff,
+  A400: #fffcfa,
+  A700: #ffefe0,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: $black-87-opacity,
+    600: $black-87-opacity,
+    700: $black-87-opacity,
+    800: $black-87-opacity,
+    900: $black-87-opacity,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: $black-87-opacity,
+  )
+);
+
+
+$my-app-primary: mat-palette($blue-palette);
+$my-app-accent: mat-palette($beige-palette);
+$my-app-warn: mat-palette($beige-palette);
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent, $my-app-warn);
+@include angular-material-theme($my-app-theme);
