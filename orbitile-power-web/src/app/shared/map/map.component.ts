@@ -36,11 +36,10 @@ export class MapComponent implements OnInit {
     zoom: 10,
     center: latLng(52.72462, 19.3434905),
     layers: [tileLayer(
-      'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}',
-      {
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: '',
         maxZoom: 20,
-        id: 'mapbox.streets',
+        id: 'mapbox/streets-v11',
         accessToken: 'pk.eyJ1Ijoia3Jhd3BpbyIsImEiOiJjazBxNzBmanowNTJnM29wZzN2ODg0c3J4In0.1UMIl5BqxAYxY1WNCmIwsQ'
       })]
   };

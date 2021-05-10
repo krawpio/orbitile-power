@@ -12,9 +12,7 @@ import {IconService} from './core/services/icon.service';
 import {PageNotFoundComponent} from './core/page-not-found/page-not-found.component';
 import {httpInterceptorProviders} from './core/http-interceptors';
 import {AuthModule} from './core/auth/auth.module';
-
 import {MenuModule} from './shared/menu/menu.module';
-
 import {PowerlineModule} from './modules/powerline/powerline.module';
 import {AlertModule} from './modules/alerts/alert.module';
 import {DashboardModule} from './modules/dashboard/dashboard.module';

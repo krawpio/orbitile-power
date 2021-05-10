@@ -115,9 +115,14 @@ export class OrderListComponent implements OnInit {
         key: 'code',
         label: 'Nazwa linii',
         options: [
-          {key: 'SIT-WOR', value: 'Sitnicka'},
-          {key: 'LUB-KOC', value: 'Kock'},
-          {key: 'RAD-BRZ', value: 'Radomsko'}
+          // {key: 'SIT-WOR', value: 'Sitnicka'},
+          // {key: 'LUB-KOC', value: 'Kock'},
+          // {key: 'RAD-BRZ', value: 'Radomsko'}
+          {key: 'LES-LES', value: 'Leśnica-Leśnica'},
+          {key: 'LES-WIL', value: 'Leśnica-Wilkszyn'},
+          {key: 'LES-PRZ', value: 'Leśnicka-Przedmoście'},
+          {key: 'PRZ-KOM', value: 'Przedmoście-Komornik'},
+          {key: 'WIL-WIL', value: 'Wilkszyn-Wilkszyn'}
         ],
         order: 9,
         width: 500

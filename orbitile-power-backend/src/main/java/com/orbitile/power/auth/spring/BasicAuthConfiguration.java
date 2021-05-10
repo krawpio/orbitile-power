@@ -28,7 +28,7 @@ public class BasicAuthConfiguration extends WebSecurityConfigurerAdapter {
 
   @Autowired
   public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
-    auth.inMemoryAuthentication().withUser("demo_pge").password("{noop}0rb!tile1").roles("USER");
-//    auth.inMemoryAuthentication().withUser("demo").password("{noop}proximaall1").roles("USER");
+//    auth.inMemoryAuthentication().withUser("demo_pge").password("{noop}0rb!tile1").roles("USER");
+    auth.inMemoryAuthentication().withUser("demo").password("{noop}proximaall1").roles("USER");
   }
 }
