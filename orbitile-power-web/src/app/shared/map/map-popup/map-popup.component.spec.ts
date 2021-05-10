@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { MapPopupComponent } from './map-popup.component';
 
@@ -6,7 +6,7 @@ describe('MapPopupComponent', () => {
   let component: MapPopupComponent;
   let fixture: ComponentFixture<MapPopupComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ MapPopupComponent ]
     })

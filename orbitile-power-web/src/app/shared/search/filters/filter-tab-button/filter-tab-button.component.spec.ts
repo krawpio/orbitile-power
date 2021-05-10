@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { FilterTabButtonComponent } from './filter-tab-button.component';
 
@@ -6,7 +6,7 @@ describe('FilterTabButtonComponent', () => {
   let component: FilterTabButtonComponent;
   let fixture: ComponentFixture<FilterTabButtonComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ FilterTabButtonComponent ]
     })

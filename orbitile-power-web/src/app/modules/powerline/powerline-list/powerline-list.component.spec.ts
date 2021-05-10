@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { PowerlineListComponent } from './powerline-list.component';
 
@@ -6,7 +6,7 @@ describe('LineListComponent', () => {
   let component: PowerlineListComponent;
   let fixture: ComponentFixture<PowerlineListComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ PowerlineListComponent ]
     })

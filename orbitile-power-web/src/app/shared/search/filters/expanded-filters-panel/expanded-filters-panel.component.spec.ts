@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ExpandedFiltersPanelComponent } from './expanded-filters-panel.component';
 
@@ -6,7 +6,7 @@ describe('FiltersPanelComponent', () => {
   let component: ExpandedFiltersPanelComponent;
   let fixture: ComponentFixture<ExpandedFiltersPanelComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ ExpandedFiltersPanelComponent ]
     })
