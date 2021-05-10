@@ -12,11 +12,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
-import {Ng5SliderModule} from 'ng5-slider';
 import {MatChipsModule} from '@angular/material/chips';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {DateAdapter, MAT_DATE_FORMATS, MAT_DATE_LOCALE, MatNativeDateModule} from '@angular/material/core';
 import {APP_DATE_FORMATS, MatDateAdapterPl} from './mat-date-adapter-pl';
+import {NgxSliderModule} from '@angular-slider/ngx-slider';
 
 
 @NgModule({
@@ -34,7 +34,7 @@ import {APP_DATE_FORMATS, MatDateAdapterPl} from './mat-date-adapter-pl';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    Ng5SliderModule,
+    NgxSliderModule,
     MatChipsModule,
     MatDatepickerModule,
     MatNativeDateModule

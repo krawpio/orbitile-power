@@ -3,7 +3,7 @@
     <input matInput [value]="control.value" (input)="setFromValue($event)" type="number">
   </mat-form-field>
 
-  <ng5-slider
+  <ngx-slider
     class="range"
     [(value)]="control.value"
     [(highValue)]="control.toValue"
@@ -13,7 +13,7 @@
           hideLimitLabels: true,
           hidePointerLabels: true
         }"
-  ></ng5-slider>
+  ></ngx-slider>
 
   <mat-form-field appearance="outline" class="slider-input">
     <input matInput [value]="control.toValue" (input)="setToValue($event)" type="number">
